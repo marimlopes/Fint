@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./ASSETS/CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <div class="outer-container">
+        <div class="inner-container">
+            <h1>Acessar Conta</h1>
+            <div class="social-buttons">
+                <button class="google">Acessar com Google</button>
+                <button class="apple">Acessar com Apple</button>
+            </div>
+            <div class="or-divider">- OU -</div>
+            <div class="login-form">
+                <input type="text" placeholder="CPF" required>
+                <div class="password-container">
+                    <input type="password" placeholder="Senha" id="password" required>
+                    <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                </div>
+                <button type="submit">Acessar a Conta</button>
+            </div>
+            <div class="register-link">
+                Não possui uma conta? <a href="#">Cadastre-se</a>
+            </div>
+        </div>
+        <div class="right-image">
+            <img src="./ASSETS/IMAGENS/ANSOFF (13)_page-0006.jpg" alt="Imagem">
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById('password');
+            var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+        }
+    </script>
+</body>
+</html>
